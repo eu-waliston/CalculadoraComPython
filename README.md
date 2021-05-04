@@ -1,2 +1,2 @@
-# Calculadora Com Python
-Uma Simples calculadora usando python
+# Calculadora PySimpleGUI
+Uma calculadora usando PySimpleGUI
