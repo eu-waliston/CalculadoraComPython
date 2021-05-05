@@ -36,4 +36,43 @@ layout = [[sg.Menu(menu_layout)],
           sg.Button('=', font=('Consolas', 20), key='-RESULT-')]]
 
          
+#CLASS WITH THE APP INSIDE
+class app():
+    def __init__(self):
+        self.window = sg.window('PyCalculator', layout=layout, margins=(0,0), resizable=True, return_keyboard_events=False)
+        self.resuslt = 0
+        self.oper = ''
+        self.window.read(timeout=1) #quantidade de tempo usado peli simple gui
+    for i in range(1, 5):
+        for button in layout[i]:
+            button.expend(xpand_x=True, expand_y=True)
+
+# FUNCTION IN THE  MENU_LAYOUT
+    def about(self):
+        sg.popup('About', 'Just an example', 'contact me')
+
+#RESULS OF CALCULATOR 
+def result(self):
+    if self.oper == '+':
+        return float(self.result) + float(self.values['-BOX-'])
+    if self.oper == '+':
+        return float(self.result) - float(self.values['-BOX-'])
+    if self.oper == '+':
+        return float(self.result) * float(self.values['-BOX-'])
+    if self.oper == '+':
+        return float(self.result) / float(self.values['-BOX-'])
+
+# THIS FUNCTION KEEP THE APLICATION WORKING
+def start(self):
+    while True:
+        event, self.values = self.window.read()
+
+        if event in (None, 'Exit', sg.WIND_CLOSED):
+            break
+
+# IF U CLICK ON 'ABOUT' THIS FUNCTION WILL START
+        if event in ('About'):
+            self.about()
+
+
 
