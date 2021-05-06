@@ -7,7 +7,7 @@ WIN_W = 30
 WIN_H = 50
 
 #MENU LAYOUT
-menu_layout = [['File', ['Save', 'Exit']],
+menu_layout =   [['File', ['Save', 'Exit']],
                 ['Tools', ['Waiting']],
                 ['Help', ['About']]]
 
@@ -74,5 +74,70 @@ def start(self):
         if event in ('About'):
             self.about()
 
+        if event in ('-ONE-'):
+            if self.values['-BOX-'] == '0':
+                self.window['-BOX-'].upade(values='1')
+        else:
+            self.window['-BOX-'].update(value=self.values['-BOX-'] + '1')
 
+
+        if event in ('-TWO-'):
+            if self.values['-BOX-'] == '0':
+                self.window['-BOX-'].update(values='2')
+        else:
+            self.window['-BOX-'].update(value=self.values['-BOX-'] + '2')
+
+
+        if event in ('-THREE-'):
+            if self.values['-BOX-'] == '0':
+                self.window['-BOX-'].update(values='3')
+        else:
+            self.window['-BOX-'].update(value=self.values['-BOX-'] + '3')
+
+
+        if event in ('-FOUR-'):
+            if self.values['-BOX-'] == '0':
+                self.window['-BOX-'].update(values='4')
+        else:
+            self.window['-BOX-'].update(value=self.values['-BOX-'] + '4')
+
+
+        if event in ('-FIVE-'):
+            if self.values['-BOX-'] == '0':
+                self.window['-BOX-'].update(values='5')
+        else:
+            self.window['-BOX-'].update(value=self.values['-BOX-'] + '5')
+
+        if event in ('-SIX-'):
+            if self.values['-BOX-'] == '0':
+                self.window['-BOX-'].update(values='6')
+        else:
+            self.window['-BOX-'].update(value=self.values['-BOX-'] + '6')
+
+        if event in ('-SEVEN-'):
+            if self.values['-BOX-'] == '0':
+                self.window['-BOX-'].updae(values='7')
+        else:
+            self.window['-BOX-'].update(value=self.values['-BOX-'] + '7')
+
+        if event in ('-EIGHT'):
+            if self.values['-BOX-'] == '0':
+                self.window['-BOX-'].update(values='8')
+        else:
+            self.window['-BOX-'].update(value=self.values['-BOX-'] + '8')
+
+        if event in ('-NINE-'):
+            if self.values['-BOX-'] == '0':
+                self.window['-BOX-'].update(values='9')
+        else:
+            self.window['-BOX-'].update(value=self.values['-BOX-'] + '9')
+
+        if event in ('-ZERO-'):
+            if self.values['_BOX-'] == '0':
+                self.window['-BOX-'].update(values='0')
+        else:
+            self.window['-BOX-'].update(value=self.values['-BOX-'] + '9')
+
+
+        
 
