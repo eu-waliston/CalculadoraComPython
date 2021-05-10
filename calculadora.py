@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
 
-sg.theme('DarkTeal12')
+sg.theme('DarkPurple3')
 
 # Tamanho Da Tela
 WIN_W = 30
@@ -14,7 +14,7 @@ menu_layout = [['File', ['Save', 'Exit']],
 # Elementos dentro da nossa - ROW 1
 layout = [[sg.Menu(menu_layout)],
           [sg.Input('0', size=(int(WIN_W/2), 1), font=('Consolas', 20), key='-BOX-'),
-           sg.Button('<-', font=('Consolas', 20), key='-BACKARROW-'),
+           sg.Button('Cc', font=('Consolas', 20), key='-BACKARROW-'),
            sg.Button('C', font=('Consolas', 20), key='-CLEAR-')],
 # Aqui começa a ROW 2
           [sg.Button('7', font=('Consolas', 20), key='-SEVEN-'),
