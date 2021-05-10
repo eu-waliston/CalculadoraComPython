@@ -1,10 +1,10 @@
-import PySimpleGUI
+import PySimpleGUI as sg
 
-sg.theme('random')
+sg.theme('DarkTeal12')
 
 # Tamanho Da Tela
-WIN_w = 30
-WIN_h = 50
+WIN_W = 30
+WIN_H = 50
 
 # Menu layout
 menu_layout = [['File', ['Save', 'Exit']],
@@ -33,7 +33,7 @@ layout = [[sg.Menu(menu_layout)],
            sg.Button('2', font=('Consolas', 20), key='-TWO-'),
            sg.Button('3', font=('Consolas', 20), key='-THREE-'),
            sg.Button('0', font=('Consolas', 20), key='-ZERO-'),
-           sg.button('=', font=('Consolas', 20), key='-RESULT-')]]
+           sg.Button('=', font=('Consolas', 20), key='-RESULT-')]]
 
 
 # Aqui fica a classe com o APP
@@ -43,9 +43,9 @@ class App():
         self.result = 0
         self.oper = ''
         self.window.read(timeout=1)
-    for i in range(1, 5):
-        for button in layout[i]:
-            button.expand(expand_x=True, expando_y=True)
+        for i in range(1, 5):
+            for button in layout[i]:
+                button.expand(expand_x=True, expand_y=True)
 
 # Funções do menu
     def about(self):
@@ -67,7 +67,7 @@ class App():
         while True:
             event, self.values = self.window.read()
 
-            if event in (None, 'Exit', sg.WIND_CLOSED):
+            if event in (None, 'Exit', sg.WIN_CLOSED):
                 break
 
 # Clicando em ABOUT no menu, Ativa essa função
@@ -178,7 +178,7 @@ class App():
 
             if event in ('-RESULT-'):
                 self.result = self.resulter()
-                self.window['-BOX-'].update(value=self.resulter)
+                self.window['-BOX-'].update(value=self.result)
                 self.result = 0
                 self.oper = ''
 
